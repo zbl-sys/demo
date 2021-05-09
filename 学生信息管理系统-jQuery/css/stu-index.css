@@ -1,0 +1,150 @@
+:root,
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+.header{
+    height: 70px;
+    background-color: #354457;
+    font-size: 14px;
+    line-height: 70px;
+    color: #b3bcc5;
+    display: flex;
+    align-items: center;
+}
+.header img{
+    width: 30px;
+    height: 30px;
+    padding: 0px 10px 0px 20px;
+}
+.content{
+    font-size: 14px;
+    position: relative;
+    height: 100%;
+}
+.content .aside{
+    height: calc(100vh - 70px);
+    width: 200px;
+    background-color: #4d5e70;
+    color: #abbed1;
+    box-sizing: border-box;
+}
+.content .aside .nav{
+    margin: 0;
+    line-height: 40px;
+    padding-top: 10px;
+}
+.content .aside .nav dd{
+    margin: 0px;
+    padding: 0px 10px 0px 60px;
+    cursor: pointer;
+}
+.content .aside .nav dd:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #3d6391;
+}
+.content .aside .nav dt{
+    font-size: 17px;
+    padding-left: 20px;
+}
+.content .aside .nav .active{
+    background-color: #ddd;
+    color: #354457;
+}
+.stu-content{
+    position: absolute;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 70px);
+    background-color: #eee;
+    overflow: scroll;
+    top: 0;
+    left: 200px;
+}
+.stu-content .student-table{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+.stu-content .student-table thead{
+    background-color: #e3e8ee;
+    color: #646987;
+}
+.stu-content .student-table tbody{
+    background-color: #fff;
+}
+.stu-content .student-table tbody tr:hover{
+    background-color: rgba(87, 79, 79, 0.3);
+}
+.stu-content .student-table tbody .edit{
+    background-color: rgba(33, 209, 77, 0.8);
+}
+.stu-content .student-table tbody .remove{
+    background-color: rgba(221, 67, 28, 0.8);
+}
+.stu-content .student-table tbody .btn{
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 5px 15px;  
+}
+.stu-content .add-form{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(175, 57, 57, 0.2);
+    top: calc(100% - 480px);
+    left: calc(100% - 1000px);
+}
+.stu-content .add-form .insert-student-info{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.stu-content .add-form .insert-student-info h2,
+.stu-content .add-form .insert-student-info div:last-child,
+.edit-student .edit-student-info h2,
+.edit-student .edit-student-info div:last-of-type{
+    text-align: center;
+}   
+.stu-content .add-form .insert-student-info div,
+.edit-student .edit-student-info div{
+    margin: 10px auto;
+}
+.stu-content .add-form .insert-student-info div:last-child .btn,
+.edit-student .edit-student-info div:last-of-type #edit-submitBtn{
+    padding: 5px 10px;
+}
+.add-info-display{
+    display: none;
+}
+.stu-content .add-form .insert-student-info label:not(#sex),
+.edit-student .edit-student-info label:not(#sex){
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+.edit-student{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 61, 61, 0.2);
+}
+.edit-student .edit-student-info{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 600px;
+    top: 100px;
+    background-color: #e3e8ee;
+}
+.edit-student-display{
+    display: none;
+}

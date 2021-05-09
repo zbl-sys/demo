@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(168, 164, 164);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.warpper{
+    width: 500px;
+    margin: 200px auto;
+    border: 1px solid #444;
+    background: #555353;
+}
+.warpper .top{
+    padding: 20px 35px;
+    border-bottom : 2px solid rgb(173, 168, 168);
+}
+.warpper .top .time1{
+    font-size: 40px;
+    color: #ccc;
+    margin: 0;
+}
+.warpper .top .time2{
+    font-size: 14px;
+    color: rgb(153, 142, 142);
+    margin: 0;
+}
+.warpper .bot{
+    padding: 20px 0;
+    color:  rgb(153, 142, 142);
+}
+.warpper .bot .control{
+    display: flex;  /*将盒模型设置为弹性盒模型*/
+    justify-content: space-between;/*设置弹性盒模型的对齐方式为两端对齐*/
+    line-height: 20px;
+    padding: 0 45px;
+    margin-bottom: 15px;
+}
+.warpper .bot .control .up,.down{
+    display: inline-block;
+    font-size: 20px;
+    transform: scaleX(1.9);
+    margin-left: 33px;
+    cursor: pointer;
+    padding-right: 20px;
+}
+.warpper .content{
+    padding: 0 30px;
+}
+.warpper .content .content-week{
+    display: flex;
+    padding-right: 20px;
+}
+.warpper .content .content-week span{
+    height: 40px;
+    flex: 1 1 auto;/*设置弹性项目增大和缩小的数值来适应空间大小*/
+    text-align: center;
+}
+.warpper .content .content-date{
+    display: flex;
+    flex-wrap: wrap;/*指定弹性模型中的元素多行显示*/
+    color: rgb(216, 201, 201);
+}
+.warpper .content .content-date li{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    flex-direction: column;/*元素垂直排列*/
+    align-items: center;/*内容垂直对齐*/
+}
+.warpper .content .content-date .active{
+    background-color: rgb(105, 177, 177);
+}
+.warpper .content .content-date .last-month{
+    color:  rgb(153, 142, 142);
+}
+.warpper .content .content-date #mouseover{
+    box-sizing: border-box;
+    border: 2px solid rgba(186, 206, 199, 0.7);
+    background-color: rgba(192, 176, 176, 0.5);
+}

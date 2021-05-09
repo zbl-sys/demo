@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 70px;
+    background-color: #354457;
+    line-height: 70px;
+    font-size: 14px;
+    color: #b3bcc5;
+}
+.header img{
+    padding-left: 20px;
+    padding-right: 5px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.aside{
+    position: fixed;
+    width: 200px;
+    height: calc(100% - 70px);
+    background-color: #4d5e70;
+    color: #abbed1;
+    font-size: 14px;
+    line-height: 40px;
+}
+.aside dd.active{
+    background-color: #ddd;
+    color: #354457;
+}
+.aside dt{
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 16px;
+}
+.aside dd{
+    padding-left: 60px;
+    cursor: pointer;
+}
+.aside dd:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #3d6391;
+}
+.student-info{
+    padding-left: 200px;
+    height: calc(100vh - 70px);
+    background-color: #eee;
+    overflow: scroll;
+}
+#student-table{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+#student-table thead{
+    background-color: #e3e8ee;
+    color: #646987;
+}
+#student-table tbody{
+    background-color: #fff;
+}
+#student-table tbody .btn{
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 5px 15px;
+}
+#student-table tbody .edit{
+    background-color: #5cb85c;
+}
+#student-table tbody .remove{
+    background-color: #d9534f;
+}
+.add-student-active{
+    display: none;
+}
+.student-info .add-student .insert-student-info{
+    width: 500px;
+    margin: 150px auto;
+}
+.student-info .add-student .insert-student-info h2,.edit-student .edit-student-info h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.student-info .add-student .insert-student-info div,.edit-student .edit-student-info div{
+    margin: 15px 0;
+}
+.student-info .add-student .insert-student-info input{
+    outline: none;
+}
+.student-info .add-student .insert-student-info #female{
+    margin-left: 10px;
+}
+.student-info .add-student .insert-student-info label:not(#sex),.edit-student .edit-student-info label:not(#sex){
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+.student-info .add-student .insert-student-info .btn:first-of-type{
+    margin-left: 150px;
+    margin-right: 8px;
+}
+.student-info .add-student .insert-student-info .btn{
+    padding: 5px 15px;
+}
+.edit-student{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(110, 101, 101, 0.5);
+    top: 0;
+    left: 0;
+}
+.edit-student .edit-student-info{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: #fff;
+}
+.edit-student .edit-student-info .edit-btn{
+    padding: 5px 15px;
+    margin-left: 200px;
+}
+.edit-student .edit-student-info input{
+    outline: none;
+}
+.edit-student-display{
+    display: none;
+}

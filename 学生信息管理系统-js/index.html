@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息管理系统</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <div class="header">
+            <img src="img/logo.png" alt="这是logo图片">
+            <span>渡一教育</span>
+        </div>
+        <div class="aside">
+            <dl class="menu">
+                <dt>信息管理</dt>
+                <dd class="active" data-id="student-list">学生列表</dd>
+                <dd data-id="add-student">添加学生</dd>
+            </dl>
+        </div>
+        <div class="student-info">
+            <div class="student-list" id="student-list">
+                <table id="student-table">
+                    <thead>
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>邮箱</th>
+                            <th>年龄</th>
+                            <th>手机号</th>
+                            <th>住址</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>17111227</td>
+                            <td>赵博龙</td>
+                            <td>男</td>
+                            <td>123456789@163.com</td>
+                            <td>100</td>
+                            <td>12345678912</td>
+                            <td>火星市火星区火星大街</td>
+                            <td>
+                                <button class="btn edit">编辑</button>
+                                <button class="btn remove">删除</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="edit-student edit-student-display">
+                <form action="#" class="edit-student-info">
+                    <div>
+                        <h2>修改学生信息</h2>
+                        <label for="edit-name">姓名</label>
+                        <input type="text" id="edit-name" name="name"/>
+                    </div>
+                    <div>
+                        <label>性别</label>
+                        <input type="radio" id="edit-male" name="sex" value="0"/>
+                        <label for="edit-male" id="sex">男</label>
+                        <input type="radio" id="edit-female" name="sex" value="1"/>
+                        <label for="edit-female" id="sex">女</label>
+                    </div>
+                    <div>
+                        <label for="edit-email">邮箱</label>
+                        <input type="text" id="edit-email" name="email"/>
+                    </div>
+                    <div>
+                        <label for="edit-sNo">学号</label>
+                        <input type="text" id="edit-sNo" name="sNo" readonly/>
+                    </div>
+                    <div>
+                        <label for="edit-birth">出生年</label>
+                        <input type="text" id="edit-birth" name="birth"/>
+                    </div>
+                    <div>
+                        <label for="edit-phone">手机号</label>
+                        <input type="text" id="edit-phone" name="phone"/>
+                    </div>
+                    <div>
+                        <label for="edit-address">家庭住址</label>
+                        <input type="text" id="edit-address" name="address"/>
+                    </div>
+                    <div>
+                        <input type="submit" id="edit-submitBtn" class="edit-btn" value="提交"/>
+                    </div>
+                </form>
+            </div>
+            <div class="add-student add-student-active" id="add-student">
+                <form action="#" class="insert-student-info">
+                    <div>
+                        <h2>请输入学生信息</h2>
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name"/>
+                    </div>
+                    <div>
+                        <label>性别</label>
+                        <input type="radio" id="male" name="sex" checked value="0"/>
+                        <label for="male" id="sex">男</label>
+                        <input type="radio" id="female" name="sex" value="1"/>
+                        <label for="female" id="sex">女</label>
+                    </div>
+                    <div>
+                        <label for="email">邮箱</label>
+                        <input type="text" id="email" name="email"/>
+                    </div>
+                    <div>
+                        <label for="sNo">学号</label>
+                        <input type="text" id="sNo" name="sNo"/>
+                    </div>
+                    <div>
+                        <label for="birth">出生年</label>
+                        <input type="text" id="birth" name="birth"/>
+                    </div>
+                    <div>
+                        <label for="phone">手机号</label>
+                        <input type="text" id="phone" name="phone"/>
+                    </div>
+                    <div>
+                        <label for="address">家庭住址</label>
+                        <input type="text" id="address" name="address"/>
+                    </div>
+                    <div>
+                        <input type="submit" id="submitBtn" class="btn" value="提交"/>
+                        <input type="reset" class="btn" value="重置"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

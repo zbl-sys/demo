@@ -1,0 +1,171 @@
+/* 初始化不部分样式 */
+:root,
+body,
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    list-style: none;
+}
+/* 最外层的包裹容器 */
+.conatiner{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 图片列表 */
+.conatiner .img-list{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+/* 图片列表中的每一项 */
+.conatiner .img-list li{
+    width: 16%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    /* 监听点阵式操作，调用GPU加速 */
+    will-change: transform;
+    transition: all .5s linear;
+    opacity: .5;
+    background-color: #333;
+}
+.conatiner .img-list li:hover{
+    transform: scale(1.02);
+    opacity: 1;
+    cursor: pointer;
+}
+/* 盛放图片的容器 */
+.conatiner .img-list li div:first-child{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* 这里将图片放到外边，刷新页面的时候，取消wrap类名 */
+.conatiner .img-list .wrap .wrap-inner{
+    transform: translateY(-100%);
+}
+/* 设置每一项变化的延迟 */
+.conatiner .img-list li .wrap-inner{
+    transition: all .5s;
+}
+.conatiner .img-list li:nth-child(1) .wrap-inner{
+    transition-delay: .2s;
+}
+.conatiner .img-list li:nth-child(2) .wrap-inner{
+    transition-delay: .3s;
+}
+.conatiner .img-list li:nth-child(3) .wrap-inner{
+    transition-delay: .4s;
+}
+.conatiner .img-list li:nth-child(4) .wrap-inner{
+    transition-delay: .5s;
+}
+.conatiner .img-list li:nth-child(5) .wrap-inner{
+    transition-delay: .6s;
+}
+.conatiner .img-list li:nth-child(6) .wrap-inner{
+    transition-delay: .7s;
+}
+/* 设置中间字体的相关样式 */
+.conatiner .img-list li .text{
+    position: absolute;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+}
+.conatiner .img-list li:hover div:nth-child(2){
+    font-size: 20px;
+}
+/* 逐个设置每一个区域的背景图 */
+.conatiner .img-list li:nth-child(1) .img{
+    background-image: url(./img/1.jpg);
+}
+.conatiner .img-list li:nth-child(2) .img{
+    background-image: url(./img/2.jpg);
+}
+.conatiner .img-list li:nth-child(3) .img{
+    background-image: url(./img/3.jpg);
+}
+.conatiner .img-list li:nth-child(4) .img{
+    background-image: url(./img/4.jpg);
+}
+.conatiner .img-list li:nth-child(5) .img{
+    background-image: url(./img/5.jpg);
+}
+.conatiner .img-list li:nth-child(6) .img{
+    background-image: url(./img/6.jpg);
+}
+/* 被点击图片的类名样式 */
+#active .active{
+    width: 100%;
+}
+#active li:not(.active){
+    width: 0%;
+    height: 0%;
+}
+#active li{
+    /* 先变化高度，再延迟变化宽度 */
+    transition: height .5s linear,
+                width .5s linear .5s;
+} 
+#active li .text{
+    opacity: 0;
+    transition: .5s linear;
+}
+.conatiner .wrap-inner .control{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.conatiner .wrap-inner .control .header-text{
+    padding-left: 30px;
+    font-size: 22px;
+}
+.conatiner .wrap-inner .control .close-btn{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    padding-right: 30px;
+}
+#active .control{
+    opacity: 1;
+    transition: all 0.5s linear 0.5s;
+}
+/* 关闭按钮 */
+.conatiner .wrap-inner .control .close-btn::after,
+.conatiner .wrap-inner .control .close-btn::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    top: 50%;
+}
+.conatiner .wrap-inner .control .close-btn::after{
+    transform: rotateZ(45deg)
+}
+.conatiner .wrap-inner .control .close-btn::before{
+    transform: rotateZ(-45deg);
+}
+#active .control .close-btn{
+    transform: rotateZ(360deg);
+    transition:all 0.5s linear 1s;
+}

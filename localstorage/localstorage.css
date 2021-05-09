@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.shopping{
+    width: 1000px;
+    margin: 100px auto;
+}
+.display{
+    width: 100%;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-collapse: collapse;
+}
+.display tr{
+    border-bottom: 2px dashed #ddd;
+}
+.display img{
+    background: #f4f4f4;
+    border: 1px solid #eaeaea;
+    vertical-align: middle;
+}
+.display td{
+    padding: 15px 0;
+}
+.display td:nth-of-type(2){
+    text-align: left;
+    width: 300px;
+}
+.display td:nth-of-type(3){
+    color: rgb(192, 49, 49);
+    font-size: 20px;
+}
+.display tr:last-child{
+    border: 1px solid #ddd;
+}
+.display p{
+    padding: 8px 0;
+    font-size: 18px;
+    color: rgb(53, 43, 43);
+}
+.display .color span{
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 2px;
+}
+/* 颜色选择按钮，选中的样式 */
+.display .color span.active{
+	border:2px solid #b4a078;
+	background: url(src/img/ico_02.gif) no-repeat right bottom;
+}
+.display td:nth-of-type(4) span,td:nth-of-type(4) strong{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.display td:nth-of-type(4) strong{
+    width: 50px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.display td:nth-of-type(5) button{
+    width: 80px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #f40;
+    color: rgb(70, 56, 56);
+}
+.select{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+}
+.select thead{
+    border: 2px solid #ddd;
+    background-color: rgba(156, 155, 151, 0.5);
+    font-size: 22px;
+    text-align: center;
+}
+.select thead  strong{
+    color: rgb(192, 49, 49);;
+}
+.select tr:first-of-type{
+    height: 60px;
+    line-height: 60px;
+}
+.select tbody td{
+    padding: 10px 0;
+}
+.select tbody img{
+    vertical-align: middle;
+}
+.select td:last-of-type button,.select th:last-of-type button{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.select th:last-of-type button{
+    width: 80px;
+}
+
